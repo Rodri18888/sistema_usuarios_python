@@ -19,4 +19,9 @@ def validacion_datos(id, nombre, apellido, edad, ciudad):
      
     return True  
 
+
+def validacion_buscar_id(id_buscar):
+    if not isinstance(id_buscar, int) or id_buscar <= 0:
+        raise ValueError("El ID a buscar debe ser un numero entero")
     
+    return True
