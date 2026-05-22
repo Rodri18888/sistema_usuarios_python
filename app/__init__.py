@@ -1,6 +1,11 @@
 print("Inicializando el paquete app...")
 
-VERSION = "1.1.0"
+__all__ = [
+    'config',
+    'usuarios'
+]
 
-import app.usuarios
-import app.config
+from . import config
+from . import usuarios
+
+VERSION = "1.1.0"

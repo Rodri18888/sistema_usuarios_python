@@ -6,7 +6,7 @@ def validacion_datos(id, nombre, apellido, edad, ciudad):
         raise ValueError("El nombre no puede estar vacio")
     
     if not apellido or not apellido.strip():
-        raise ValueError("El nombre no puede estar vacio")
+        raise ValueError("El apellido no puede estar vacio")
     
     if not isinstance(edad, int) or edad <= 0:
         raise ValueError("El ID del usuario debe ser un numero entero") 

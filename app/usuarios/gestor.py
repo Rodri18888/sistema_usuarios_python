@@ -1,4 +1,4 @@
-from validaciones import validacion_datos, validacion_buscar_id
+from .validaciones import validacion_datos, validacion_buscar_id
 
 #Diccionario para guardar usuarios
 dicc_usuarios = {}
@@ -54,11 +54,3 @@ def buscar_usuario():
     except ValueError as error:
         print(f"Error de validacion: {error}")
         return None
-
-
-
-
-registro_usuarios(1, "Ana", "Ana", 18, "Medellin")
-registro_usuarios(2, "Pepe", "fsdfds", 54, "Medellin")
-
-buscar_usuario()
