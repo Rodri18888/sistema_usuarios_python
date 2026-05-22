@@ -43,14 +43,13 @@ def buscar_usuario():
         id_buscar = int(input("Ingrese la ID que desee buscar: ")) 
         validacion_buscar_id(id_buscar)
 
-        for id_usuario, objeto_persona in dicc_usuarios.items():
-            if id_buscar == id_usuario:
-                print("Usuario encontrado:")
-                print(f"ID: {id_usuario} - Nombre: {objeto_persona.nombre} - Apellido: {objeto_persona.apellido} - Edad: {objeto_persona.edad} - Ciudad: {objeto_persona.ciudad}")
-                return
-            else:
-                print("Usuario no encontrado.")
-                return    
+        if id_buscar in dicc_usuarios:
+            objeto_persona = dicc_usuarios[id_buscar]
+            print("Usuario encontrado:")
+            print(f"ID: {id_buscar} - Nombre: {objeto_persona.nombre} - Apellido: {objeto_persona.apellido} - Edad: {objeto_persona.edad} - Ciudad: {objeto_persona.ciudad}")
+        else:
+            print("Usuario no encontrado.")
+            
     except ValueError as error:
         print(f"Error de validacion: {error}")
         return None
